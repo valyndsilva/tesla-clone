@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "./Footer";
 import Header from "./Header";
 
 function Layout({ children }) {
@@ -7,7 +6,6 @@ function Layout({ children }) {
     <div className="flex w-full">
       <Header />
       {children}
-    
     </div>
   );
 }

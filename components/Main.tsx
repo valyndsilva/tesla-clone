@@ -5,7 +5,7 @@ import Section from "./Section";
 
 function Main() {
   return (
-    <Container>
+    <div>
       <Section
         title="Model Y"
         description="Order Online With Touchless Delivery"
@@ -63,12 +63,8 @@ function Main() {
         id="accessories"
       />
       <Footer />
-    </Container>
+    </div>
   );
 }
 
 export default Main;
-
-const Container = styled.div`
-  height: 100vh;
-`;

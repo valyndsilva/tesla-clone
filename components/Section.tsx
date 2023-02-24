@@ -2,15 +2,6 @@ import { ExpandMore } from "@mui/icons-material";
 import React from "react";
 import Fade from "react-reveal/Fade";
 
-interface Props {
-  title: string;
-  description: string;
-  backgroundImg: string;
-  leftBtnText: string;
-  rightBtnText?: string;
-  id: string;
-}
-
 function Section({
   title,
   description,
@@ -18,11 +9,11 @@ function Section({
   leftBtnText,
   rightBtnText,
   id,
-}: Props) {
+}: Section) {
   return (
     <div
       id={id}
-      className={`flex flex-col justify-between items-center w-[100vw] h-[100vh] bg-cover bg-center bg-no-repeat !bg-[url('/images/${backgroundImg}')]`}
+      className={`flex flex-col justify-between items-center w-[100vw] h-[100vh] bg-cover bg-center bg-no-repeat !bg-[url('/assets/${backgroundImg}')]`}
     >
       <Fade bottom>
         <div className="text-center pt-[15vh]">

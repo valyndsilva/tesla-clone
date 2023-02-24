@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { selectCars } from "../redux/slices/carSlice";
@@ -13,19 +12,19 @@ function Header() {
   // console.log(cars);
 
   return (
-    <div className="min-h-[60px] fixed flex items-center justify-between py-0 px-8 top-0 left-0 right-0 z-10">
+    <div className="min-h-[10vh] fixed flex items-center justify-between py-0 px-10 top-0 left-0 right-0 z-10">
       <Link href="/">
         <Image
-          src="/images/logo.svg"
+          src="/assets/logo.svg"
           alt=""
-          className="object-contain w-32 h-5"
+          className="object-cver w-28 h-4"
           width={120}
           height={16}
         />
       </Link>
       <div className="hidden md:inline-flex items-center justify-center flex-1 space-x-4 text-sm font-semibold ">
         {cars &&
-          cars.map((car, index) => (
+          cars.map((car:string, index:number) => (
             <a key={index} href={`#${car}`} className="py-0 px-2 flex-nowrap">
               {car}
             </a>
@@ -63,12 +62,7 @@ function Header() {
             onClick={() => setBurgerStatus(false)}
           />
         </div>
-        {/* {cars &&
-            cars.map((car, index) => (
-              <li key={index}>
-                <a href="#">{car}</a>
-              </li>
-            ))} */}
+       
         <li>
           <a href="#">Existing Inventory</a>
         </li>

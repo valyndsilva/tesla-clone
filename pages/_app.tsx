@@ -3,7 +3,6 @@ import { Layout } from "../components";
 import { store } from "../redux/store";
 import { Provider } from "react-redux";
 import { useEffect, useState } from "react";
-// import Login from "./login";
 
 function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false);
