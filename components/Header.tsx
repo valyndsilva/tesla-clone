@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { selectCars } from "../redux/slices/carSlice";
@@ -11,8 +11,27 @@ function Header() {
   const cars = useSelector(selectCars);
   // console.log(cars);
 
+  // Change HeaderNav background on scroll
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div className="min-h-[10vh] fixed flex items-center justify-between py-0 px-10 top-0 left-0 right-0 z-10">
+    <header
+      className={`min-h-[10vh] fixed flex items-center justify-between py-0 px-10 top-0 left-0 right-0 z-50 ${
+        scrolled ? "bg-white transition ease-in shadow-md " : null
+      } `}
+    >
       <Link href="/">
         <Image
           src="/assets/logo.svg"
@@ -24,7 +43,7 @@ function Header() {
       </Link>
       <div className="hidden md:inline-flex items-center justify-center flex-1 space-x-4 text-sm font-semibold ">
         {cars &&
-          cars.map((car:string, index:number) => (
+          cars.map((car: string, index: number) => (
             <a key={index} href={`#${car}`} className="py-0 px-2 flex-nowrap">
               {car}
             </a>
@@ -52,7 +71,7 @@ function Header() {
         />
       </div>
       <div
-        className={`fixed top-0 bottom-0 right-0 bg-white w-[300px] list-none p-5 flex flex-col text-start transform transition-all duration-200 space-y-4 ${
+        className={`fixed top-0 bottom-0 right-0 bg-white w-[300px] border-l list-none px-10 py-5 flex flex-col text-start transform transition-all duration-200 space-y-5 ${
           burgerStatus ? "translate-x-0" : "translate-x-full"
         } `}
       >
@@ -62,7 +81,7 @@ function Header() {
             onClick={() => setBurgerStatus(false)}
           />
         </div>
-       
+
         <li>
           <a href="#">Existing Inventory</a>
         </li>
@@ -109,7 +128,7 @@ function Header() {
           <a href="#">Investor Relations</a>
         </li>
       </div>
-    </div>
+    </header>
   );
 }
 

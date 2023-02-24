@@ -22,7 +22,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^17.0.2",
-    "react-redux": "^7.2.6"
+    "react-redux": "^7.2.6",
+    "react-reveal": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "18.14.1",

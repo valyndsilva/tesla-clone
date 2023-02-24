@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Header, Main } from "../components";
+import {Main } from "../components";
 
 function Home() {
   return (
