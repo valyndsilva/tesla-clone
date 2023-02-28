@@ -12,6 +12,7 @@ function Main() {
         rightBtnText="Custom Order"
         leftBtnText="Explore Inventory"
         id="Model Y"
+        slug="/product/model-y"
       />
       <Section
         title="Model 3"
@@ -20,6 +21,7 @@ function Main() {
         rightBtnText="Custom Order"
         leftBtnText="Explore Inventory"
         id="Model 3"
+        slug="/product/model-3"
       />
       <Section
         title="Model S"
@@ -28,6 +30,7 @@ function Main() {
         rightBtnText="Custom Order"
         leftBtnText="Explore Inventory"
         id="Model S"
+        slug="/product/model-s"
       />
 
       <Section
@@ -37,6 +40,7 @@ function Main() {
         rightBtnText="Order Now"
         leftBtnText="Learn More"
         id="solar-panel"
+        slug="/product/powerwall"
       />
       <Section
         title="Model X"
@@ -45,21 +49,24 @@ function Main() {
         rightBtnText="Custom Order"
         leftBtnText="Explore Inventory"
         id="Model X"
+        slug="/product/model-x"
       />
-      <Section
+      {/* <Section
         title="Solar For New Roofs"
         description="Solar Roof Costs Less Than A New Roof Plus Solar Panels"
         backgroundImg="solar-roof.jpg"
         rightBtnText="Order Now"
         leftBtnText="Learn More"
         id="solar-roof"
-      />
+
+      /> */}
       <Section
         title="Accessories"
         description=""
         backgroundImg="accessories.jpg"
         leftBtnText="Shop Now"
         id="accessories"
+        slug="/product/charging"
       />
       <Footer />
     </div>

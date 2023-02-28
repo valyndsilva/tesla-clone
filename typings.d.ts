@@ -7,6 +7,7 @@ interface Section {
   leftBtnText: string;
   rightBtnText?: string;
   id: string;
+  slug: string;
 }
 
 interface IProduct {

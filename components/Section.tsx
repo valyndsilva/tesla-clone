@@ -2,6 +2,7 @@ import { ExpandMore } from "@mui/icons-material";
 import Image from "next/image";
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 function Section({
   title,
@@ -10,6 +11,7 @@ function Section({
   leftBtnText,
   rightBtnText,
   id,
+  slug,
 }: Section) {
   return (
     <div
@@ -43,7 +45,7 @@ function Section({
           className="flex flex-col md:flex-row mb-8"
         >
           <div className="bg-gray-600 h-10 w-[256px] text-white flex items-center justify-center rounded-sm opacity-85 uppercase text-sm cursor-pointer m-[8px]">
-            {leftBtnText}
+            <Link href={slug}> {leftBtnText}</Link>
           </div>
           {rightBtnText && (
             <div className="bg-white h-10 w-[256px] text-black flex items-center justify-center rounded-sm opacity-65 uppercase text-sm cursor-pointer m-[8px]">
