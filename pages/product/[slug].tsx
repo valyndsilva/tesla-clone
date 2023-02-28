@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import { Header, Product } from "../../components";
+import fetchProduct from "../../utils/fetchProduct";
 import fetchProducts from "../../utils/fetchProducts";
 
 type Props = {
@@ -48,10 +49,14 @@ export async function getServerSideProps({
 }: {
   params: { slug: string };
 }) {
-  const productsData = await fetchProducts();
-  const parsedProducts = JSON.parse(productsData);
+  // const productsData = await fetchProducts();
+  // const parsedProducts = JSON.parse(productsData);
+  // const slug = params.slug;
+  // const productData = parsedProducts?.find((product) => product.slug === slug);
+  // console.log(productData);
+
   const slug = params.slug;
-  const productData = parsedProducts?.find((product) => product.slug === slug);
+  const productData = await fetchProduct(slug);
   console.log(productData);
   return {
     props: {
