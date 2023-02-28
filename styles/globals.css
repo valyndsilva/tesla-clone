@@ -1,15 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
-
 @layer base {
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Lato", sans-serif;
+    font-family: "Golos Text", sans-serif;
     color: #393c41;
   }
 

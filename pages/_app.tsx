@@ -1,7 +1,5 @@
 import "../styles/globals.css";
 import { Layout } from "../components";
-import { store } from "../redux/store";
-import { Provider } from "react-redux";
 import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }) {
@@ -15,11 +13,9 @@ function MyApp({ Component, pageProps }) {
     return null;
   }
   return (
-    <Provider store={store}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </Provider>
   );
 }
 

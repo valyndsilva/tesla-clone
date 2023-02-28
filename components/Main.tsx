@@ -4,10 +4,10 @@ import Section from "./Section";
 
 function Main() {
   return (
-    <div>
+    <div className=" snap snap-y snap-mandatory">
       <Section
         title="Model Y"
-        description="Order Online With Touchless Delivery"
+        description="2% Company Car Tax. Learn More"
         backgroundImg="model-y.jpg"
         rightBtnText="Custom Order"
         leftBtnText="Explore Inventory"
@@ -23,7 +23,7 @@ function Main() {
       />
       <Section
         title="Model S"
-        description="Order Online With Touchless Delivery"
+        description=""
         backgroundImg="model-s.webp"
         rightBtnText="Custom Order"
         leftBtnText="Explore Inventory"
@@ -31,8 +31,8 @@ function Main() {
       />
 
       <Section
-        title="Lowest Cost Solar Panels in America"
-        description="Money-back guarantee"
+        title="Solar and Powerwall"
+        description="Power Everything"
         backgroundImg="solar-panel.jpg"
         rightBtnText="Order Now"
         leftBtnText="Learn More"
@@ -40,7 +40,7 @@ function Main() {
       />
       <Section
         title="Model X"
-        description="Order Online With Touchless Delivery"
+        description=""
         backgroundImg="model-x.webp"
         rightBtnText="Custom Order"
         leftBtnText="Explore Inventory"

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { selectCars } from "../redux/slices/carSlice";
-import { useSelector } from "react-redux";
 import Image from "next/image";
 import Link from "next/link";
+interface Props {
+  slug?: string;
+}
+function Header({ slug }:Props) {
+  // console.log(slug);
 
-function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
-  const cars = useSelector(selectCars);
-  // console.log(cars);
 
   // Change HeaderNav background on scroll
   const [scrolled, setScrolled] = useState(false);
@@ -29,33 +29,55 @@ function Header() {
   return (
     <header
       className={`min-h-[10vh] fixed flex items-center justify-between py-0 px-10 top-0 left-0 right-0 z-50 ${
-        scrolled ? "bg-white transition ease-in shadow-md " : null
+        scrolled ? "bg-white/50 transition ease-in shadow-md " : null
       } `}
     >
       <Link href="/">
-        <Image
-          src="/assets/logo.svg"
-          alt=""
-          className="object-cver w-28 h-4"
-          width={120}
-          height={16}
-        />
+        {slug === "model-3" || slug === "model-y" || slug === "powerwall" ? (
+          <Image
+            src="/assets/logo-white.svg"
+            alt=""
+            className="w-28 h-4"
+            width={120}
+            height={16}
+          />
+        ) : (
+          <Image
+            src="/assets/logo.svg"
+            alt=""
+            className="w-28 h-4"
+            width={120}
+            height={16}
+          />
+        )}
       </Link>
-      <div className="hidden md:inline-flex items-center justify-center flex-1 space-x-4 text-sm font-semibold ">
-        {cars &&
-          cars.map((car: string, index: number) => (
-            <a key={index} href={`#${car}`} className="py-0 px-2 flex-nowrap">
-              {car}
-            </a>
-          ))}
-        <a href="#solar-roof" className="py-0 px-2 flex-nowrap">
-          Solar Roof
+      <div
+        className={`hidden md:inline-flex items-center justify-center flex-1 space-x-4 text-md font-medium   ${
+          slug === "model-3" || slug === "model-y" || slug === "powerwall"
+            ? "text-white"
+            : "text-black"
+        }`}
+      >
+        <a href="/product/model-s" className={`py-0 px-2 flex-nowrap`}>
+          Model S
         </a>
-        <a href="#solar-panels" className="py-0 px-2 flex-nowrap">
-          Solar Panels
+        <a href="/product/model-3" className="py-0 px-2 flex-nowrap">
+          Model 3
+        </a>
+        <a href="/product/model-x" className="py-0 px-2 flex-nowrap">
+          Model X
+        </a>
+        <a href="/product/model-y" className="py-0 px-2 flex-nowrap">
+          Model Y
+        </a>
+        <a href="/product/powerwall" className="py-0 px-2 flex-nowrap">
+          Powerwall
+        </a>
+        <a href="/product/charging" className="py-0 px-2 flex-nowrap">
+          Charging
         </a>
       </div>
-      <div className="flex items-center space-x-4 text-sm font-semibold">
+      <div className="flex items-center space-x-4 text-md font-medium">
         <a href="#" className="flex mr-2">
           Support
         </a>

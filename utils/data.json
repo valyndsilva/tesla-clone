@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "model-s",
+    "title": "Model S",
+    "description": "Plaid",
+    "backgroundImg": "/assets/products/model-s-info.webp",
+    "col1Text": "396 mi",
+    "col1Desc": "Range (est.)",
+    "col2Text": "1.99 s",
+    "col2Desc": "0-60 mph*",
+    "col3Text": "200 mph",
+    "col3Desc": "Top Speed†",
+    "col4Text": "1,020 hp",
+    "col4Desc": "Vehicle Power‡",
+    "btnText": "Order Now"
+  },
+  {
+    "slug": "model-3",
+    "title": "Model 3",
+    "description": "Plaid",
+    "backgroundImg": "/assets/products/model-3-info.jpeg",
+    "col1Text": "374 mi",
+    "col1Desc": "Range (WLTP)",
+    "col2Text": "3.1 s",
+    "col2Desc": "0-60 mph*",
+    "col3Text": "AWD",
+    "col3Desc": "Dual Motor",
+    "btnText": "Order Now"
+  },
+  {
+    "slug": "model-x",
+    "title": "Model X",
+    "description": "Plaid",
+    "backgroundImg": "/assets/products/model-x-info.webp",
+    "col1Text": "333 mi",
+    "col1Desc": "Range (est.)",
+    "col2Text": "2.5 s",
+    "col2Desc": "0-60 mph*",
+    "col3Text": "9.9 s",
+    "col3Desc": "1/4 Mile",
+    "col4Text": "1,020 hp",
+    "col4Desc": "Vehicle Power‡",
+    "btnText": "Order Now"
+  },
+  {
+    "slug": "model-y",
+    "title": "Model Y",
+    "description": "",
+    "backgroundImg": "/assets/products/model-y-info.webp",
+    "col1Text": "331 mi",
+    "col1Desc": "Range (WLTP)",
+    "col2Text": "2,100 +",
+    "col2Desc": "Litres of Cargo",
+    "col3Text": "AWD",
+    "col3Desc": "Dual Motor",
+    "btnText": "Order Now"
+  },
+  {
+    "slug": "powerwall",
+    "title": "Powerwall",
+    "description": "",
+    "backgroundImg": "/assets/products/powerwall.webp",
+    "col1Text": "",
+    "col1Desc": "Store Energy",
+    "col2Text": "24/7",
+    "col2Desc": "Backup Protection",
+    "col3Text": "",
+    "col3Desc": "Power Your Home",
+    "btnText": "Find an Installer"
+  },
+  {
+    "slug": "charging",
+    "title": "Stay Charged",
+    "description": "",
+    "backgroundImg": "/assets/products/charged.jpeg",
+    "col1Text": "",
+    "col1Desc": "Charge at Home",
+    "col2Text": "40,000 +",
+    "col2Desc": "Global Superchargers",
+    "col3Text": "35,000 +",
+    "col3Desc": "Wall Connectors at Destination Charging Sites"
+  }
+]

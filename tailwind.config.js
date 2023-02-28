@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        golos: ["Golos Text", "sans-serif"],
+      },
       animation: {
         animateDown: "animateDown infinite 1.5s",
       },
