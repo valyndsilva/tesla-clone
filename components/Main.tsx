@@ -51,15 +51,6 @@ function Main() {
         id="Model X"
         slug="/product/model-x"
       />
-      {/* <Section
-        title="Solar For New Roofs"
-        description="Solar Roof Costs Less Than A New Roof Plus Solar Panels"
-        backgroundImg="solar-roof.jpg"
-        rightBtnText="Order Now"
-        leftBtnText="Learn More"
-        id="solar-roof"
-
-      /> */}
       <Section
         title="Accessories"
         description=""
